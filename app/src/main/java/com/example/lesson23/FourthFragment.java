@@ -40,7 +40,7 @@ public class FourthFragment extends Fragment {
                 FivethFragment fivethFragment = new FivethFragment();
                 fivethFragment.setArguments(bundle3);
 
-                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new FivethFragment()).addToBackStack(" ").commit();
+                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fivethFragment).addToBackStack(" ").commit();
 
             }
         });

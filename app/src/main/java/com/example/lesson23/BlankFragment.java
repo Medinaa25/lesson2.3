@@ -36,7 +36,7 @@ public class BlankFragment extends Fragment {
                 SecondFragment secondFragment = new SecondFragment();
                 secondFragment.setArguments(bundle);
 
-                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new SecondFragment()).addToBackStack(" ").commit();
+                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, secondFragment).addToBackStack(" ").commit();
             }
             
         });

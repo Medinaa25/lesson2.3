@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         if (savedInstanceState == null) {
            getSupportFragmentManager().beginTransaction().add(R.id.container,new BlankFragment()).commit();
         }
