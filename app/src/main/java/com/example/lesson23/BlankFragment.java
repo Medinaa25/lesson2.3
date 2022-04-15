@@ -32,7 +32,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                if (binding.edittext1.getText().toString() != null) {
+                if (binding.edittext1.length() > 0) {
                     Bundle bundle = new Bundle();
                     bundle.putString("KEY", binding.edittext1.getText().toString());
 
@@ -41,6 +41,8 @@ public class BlankFragment extends Fragment {
 
 
                     requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, secondFragment).addToBackStack(" ").commit();
+                }else {
+                    binding.edittext1.setText("ERROR!");
                 }
             }
             

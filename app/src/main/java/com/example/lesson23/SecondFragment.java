@@ -34,7 +34,7 @@ public class SecondFragment extends Fragment {
             binding.btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (binding.edittext2.getText().toString() != null) {
+                    if (binding.edittext2.length() > 0) {
                         Bundle bundle1 = new Bundle();
                         bundle1.putString("KEY", binding.edittext2.getText().toString());
 
@@ -43,6 +43,8 @@ public class SecondFragment extends Fragment {
                         thirdFragment.setArguments(bundle1);
 
                         requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, thirdFragment).addToBackStack(" ").commit();
+                    }else {
+                        binding.edittext2.setText("ERROR!");
                     }
                 }
                 });

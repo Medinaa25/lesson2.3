@@ -28,8 +28,8 @@ public class FivethFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         if (getArguments() != null){
-            String value = getArguments().getString("KEY");
-            binding.textView2.setText(value);
+            String textValue = getArguments().getString("KEY");
+            binding.textView2.setText(textValue);
         }
 
         binding.btn5.setOnClickListener(new View.OnClickListener() {
