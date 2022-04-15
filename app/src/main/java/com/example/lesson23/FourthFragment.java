@@ -27,8 +27,9 @@ public class FourthFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        String value = getArguments().getString("KEY");
+
         if (getArguments() != null){
+            String value = getArguments().getString("KEY");
             binding.textview1.setText(value);
         }
         binding.btn4.setOnClickListener(new View.OnClickListener() {

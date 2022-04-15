@@ -34,13 +34,16 @@ public class SecondFragment extends Fragment {
             binding.btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Bundle bundle1  = new Bundle();
-                    bundle1.putString("KEY", binding.edittext2.getText().toString());
+                    if (binding.edittext2.getText().toString() != null) {
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putString("KEY", binding.edittext2.getText().toString());
 
-                    ThirdFragment thirdFragment = new ThirdFragment();
-                    thirdFragment.setArguments(bundle1);
 
-                    requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, thirdFragment).addToBackStack(" ").commit();
+                        ThirdFragment thirdFragment = new ThirdFragment();
+                        thirdFragment.setArguments(bundle1);
+
+                        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, thirdFragment).addToBackStack(" ").commit();
+                    }
                 }
                 });
             };

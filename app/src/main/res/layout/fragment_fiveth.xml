@@ -9,6 +9,7 @@
     tools:context=".FivethFragment">
 
    <TextView
+
        android:id="@+id/textView2"
        android:textSize="@dimen/textSize"
        android:layout_marginHorizontal="@dimen/marginHorizontal"

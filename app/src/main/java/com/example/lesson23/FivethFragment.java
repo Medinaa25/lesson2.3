@@ -26,8 +26,9 @@ public class FivethFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         if (getArguments() != null){
-           String value = getArguments().getString("KEY");
+            String value = getArguments().getString("KEY");
             binding.textView2.setText(value);
         }
 
