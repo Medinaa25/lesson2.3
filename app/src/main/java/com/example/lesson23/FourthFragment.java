@@ -36,7 +36,7 @@ public class FourthFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Bundle bundle3 = new Bundle();
-                bundle3.putString("KEY",binding.textview1.toString());
+                bundle3.putString("KEY",binding.textview1.getText().toString());
 
                 FivethFragment fivethFragment = new FivethFragment();
                 fivethFragment.setArguments(bundle3);
